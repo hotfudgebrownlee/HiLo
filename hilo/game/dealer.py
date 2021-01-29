@@ -12,7 +12,6 @@ class Dealer:
         Args:
         """
         self.keep_playing = True
-        self.score = 300
         self.player = Player()
         self.cards = [1,2,3,4,5,6,7,8,9,10,11,12,13]
         self.old_card = 0
@@ -31,7 +30,7 @@ class Dealer:
 
         """
         self.get_card()
-        self.player.
+        self.player.hi_or_lo()
 
     def get_card(self):
         """
