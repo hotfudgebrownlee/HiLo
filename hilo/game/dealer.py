@@ -39,3 +39,12 @@ class Dealer:
         idx = random.randrange(0,13)
         print(f'Your card is {self.cards[idx]}.')
         self.old_card = self.cards[idx]
+
+    def do_outputs(self):
+        """
+        """
+        if self.player.can_play():
+            choice = input("Keep playing? [y/n] ")
+            self.keep_playing = (choice == "y")
+        else:
+            self.keep_playing = False
