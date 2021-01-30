@@ -1,4 +1,4 @@
-class Thrower:
+class Player:
     """
     
     """
