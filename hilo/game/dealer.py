@@ -36,9 +36,33 @@ class Dealer:
         """
         """
         idx = random.randrange(0,13)
-        print(f'Your card is {self.cards[idx]}.')
+        print(f'The card is: {self.cards[idx]}')
         self.old_card = self.cards[idx]
 
+    def do_updates(self):
+        """
+        """
+        idx = random.randrange(0,13)
+        print(f'Next card was: {self.cards[idx]}')
+        if self.player.hilo == 'h':
+            if self.old_card > self.cards[idx]:
+                print(f'{self.old_card} is higher than {self.cards[idx]}.')
+                self.player.score += 100
+                print(f'Your score is: {self.player.score}')
+            else:
+                print(f'{self.old_card} is not higher than {self.cards[idx]}.')
+                self.player.score -= 75
+                print(f'Your score is: {self.player.score}')
+        elif self.player.hilo == 'l':
+            if self.old_card < self.cards[idx]:
+                print(f'{self.old_card} is lower than {self.cards[idx]}.')
+                self.player.score += 100
+                print(f'Your score is: {self.player.score}')
+            else:
+                print(f'{self.old_card} is not lower than {self.cards[idx]}.')
+                self.player.score -= 75
+                print(f'Your score is: {self.player.score}')
+                
     def do_outputs(self):
         """
         """
